@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "prettier": {
+    "printWidth": 120,
+    "bracketSpacing": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "semi": true,
+    "useTabs": false,
+    "tabWidth": 2
+  },
+  "scripts":{
+    "test": "cypress"
+  },
+  "dependencies": {
+    "cypress": "^0.20.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "prettier": "^1.7.4"
+  }
+}
