@@ -34,4 +34,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test run --record
+      - run: yarn test run --record --key 5cd06a8e-f302-4b65-b76f-4f817795c1bb
