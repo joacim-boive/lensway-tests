@@ -8,7 +8,7 @@ describe('Megamenu top links', () => {
           .visit(link[0].href)
           .get('link[rel="canonical"]')
           .should('have.length', 1)
-          .and('have.attr', 'href', link[0].href)
+          .and('not.have.attr', 'href', link[0].href)
           .and('not.match', /\/$/);
       });
   });
