@@ -7,9 +7,6 @@ jobs:
   build:
     docker:
       cypress/internal:cy-0.19.4
-      environment:
-        ## this enables colors in the output
-        TERM: xterm
 
     working_directory: ~/repo
 
