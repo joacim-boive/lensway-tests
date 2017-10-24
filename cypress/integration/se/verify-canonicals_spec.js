@@ -16,8 +16,8 @@ list.set(
 
 describe('Verify Canonicals', () => {
   it('Should visit each URL in the list successfully and point to the correct canonical', () => {
-    list.forEach((url, shouldPointTo) => {
-      utils.testCanonical(shouldPointTo, url, `cid=${new Date().getTime()}`);
+    list.forEach((shouldPointTo, url) => {
+      utils.testCanonical(url, shouldPointTo, `cid=${new Date().getTime()}`);
     });
   });
 });
