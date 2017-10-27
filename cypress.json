@@ -1,5 +1,6 @@
 {
   "projectId": "c86wog",
   "viewportWidth": 1280,
-  "viewportHeight": 660
+  "viewportHeight": 660,
+  "chromeWebSecurity": false
 }
