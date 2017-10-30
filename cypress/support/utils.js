@@ -2,7 +2,11 @@ const ROOT_URL = 'https://sheets.googleapis.com/v4/spreadsheets';
 const SPREADSHEET_ID = '1OFArx_Ilp7QZxFnc23_lbMBYaihtY118n7qSZaJPfGo';
 const API_KEY = 'AIzaSyDIpJedu-YW3-EVYAwfA4DLpUdvnSBFhlE';
 
-export const getSheetData = (range) => {
+/**
+ *
+ * @param range {string}
+ */
+export const getSheetData = range => {
   return fetch(`${ROOT_URL}/${SPREADSHEET_ID}/values/${range}?key=${API_KEY}`, {
     method: 'GET',
     mode: 'cors',
@@ -17,11 +21,12 @@ export const getSheetData = (range) => {
       return data.values;
     })
     .catch(function(err) {
+      // eslint-disable-next-line no-console
       console.error(err);
     });
 };
 
-export const testCanonical = (url, expectedCanonical, randString = '') => {
+export const testCanonical = (url, expectedCanonicalUrl, randString = '') => {
   let separator = '';
 
   if (randString !== '') {
@@ -29,9 +34,7 @@ export const testCanonical = (url, expectedCanonical, randString = '') => {
   }
 
   cy
-    .visit(url + separator + randString)
-    .get('link[rel="canonical"]')
-    .should('have.length', 1)
-    .and('have.attr', 'href', expectedCanonical)
-    .and('not.match', /\/$/);
+    .request(url + separator + randString)
+    .its('body')
+    .should('contain', `<link rel="canonical" href="${expectedCanonicalUrl}">`);
 };

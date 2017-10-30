@@ -1,28 +1,32 @@
-const notTheseKeywords = ['linser', 'kontaktlinser', 'endagarslinser', 'lins', 'glasögon', 'solglasögon'];
+import * as cheerio from 'cheerio';
+import * as utils from '../../support/utils';
+
+let thisData = [];
+let $ = {};
+
+// eslint-disable-next-line no-return-assign
+before(() => {
+  return utils.getSheetData('title!A2:B500').then(sheetData => (thisData = sheetData));
+});
 
 describe('Headings for index page', () => {
   it('Should load without any of the keywords in the title', () => {
-    cy.visit('https://www.lensway.se');
+    let keywords = [];
+    thisData.forEach(data => {
+      let [url, keyword] = data;
+      keywords = keyword.trim().split(',');
 
-    notTheseKeywords.forEach(key => {
-      cy.title().should('not.include', key);
+      cy.request(url).then(html => {
+        $ = cheerio.load(html.body);
+        let title = $('head > title').text();
+        let h1 = $('h1').text();
+        let h2 = $('h2').text();
+        keywords.forEach(key => {
+          expect(title).to.not.include(key);
+          expect(h1).to.not.include(key);
+          expect(h2).to.not.include(key);
+        });
+      });
     });
-
-    notTheseKeywords.forEach(key => {
-      cy.get('h1').should('not.contain', key);
-    });
-
-    notTheseKeywords.forEach(key => {
-      cy.get('h2').should('not.contain', key);
-    });
-  });
-});
-
-describe('Headings for kontaktlinser', () => {
-  it('Should load with these values in the heading', () => {
-    cy.visit('https://www.lensway.se/kontaktlinser');
-
-    cy.title().should('be', 'Linser från välkända linsmärken | LensWay');
-    cy.get('h1').should('be', 'Linser');
   });
 });

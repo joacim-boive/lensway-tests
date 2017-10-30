@@ -4,7 +4,7 @@ let sheetData = [];
 
 before(() => {
   return utils.getSheetData('canonicals!A2:B500').then(data => {
-    return (sheetData = data);
+    sheetData = data;
   });
 });
 
