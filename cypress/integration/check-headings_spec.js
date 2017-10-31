@@ -1,12 +1,12 @@
 import * as cheerio from 'cheerio';
-import * as utils from '../../support/utils';
+import * as get from '../support/get';
 
 let thisData = [];
 let $ = {};
 
 // eslint-disable-next-line no-return-assign
 before(() => {
-  return utils.getSheetData('title!A2:B500').then(sheetData => (thisData = sheetData));
+  return get.sheet('title',500).then(sheetData => (thisData = sheetData));
 });
 
 describe('Headings for index page', () => {

@@ -1,11 +1,12 @@
 import * as cheerio from 'cheerio';
-import * as utils from '../../support/utils';
+import * as test from '../support/test';
+import * as get from '../support/get';
 
 let $ = {};
 let sheetData = [];
 
 before(() => {
-  return utils.getSheetData('megamenu!A2:A500').then(data => {
+  return get.sheet('megamenu', 500).then(data => {
     sheetData = data;
   });
 });
@@ -19,8 +20,8 @@ describe('Megamenu top links', () => {
 
         $ = cheerio.load(html.body);
         $('.header-large__nav-main a').each((index, link) => {
-          utils.testCanonical(thisUrl + link.attribs.href, thisUrl + link.attribs.href);
-          utils.testCanonical(thisUrl + link.attribs.href, thisUrl + link.attribs.href, `cid=${new Date().getTime()}`);
+          test.canonical(thisUrl + link.attribs.href, thisUrl + link.attribs.href);
+          test.canonical(thisUrl + link.attribs.href, thisUrl + link.attribs.href, `cid=${new Date().getTime()}`);
         });
       });
     });
