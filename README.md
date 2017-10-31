@@ -58,15 +58,15 @@ yarn dev
 
 ```
 
-Now the demo application should be available by [clicking here http://localhost:8080](http://localhost:8080).
+## Using
 
-To build the production release:
-
-```
-In a terminal, from the project root:
-yarn build
-
-```
+* [Cypress](https://www.cypress.io)
+* [Cheerio](https://github.com/cheeriojs/cheerio) for HTML parsing
+* [Prettier](https://github.com/prettier/prettier) for formatting source code
+* [ESLint](https://eslint.org) for linting
+* * [AirBnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) linting rules
+* [Yarn](https://yarnpkg.com) for package management
+* [Google Sheet](https://www.google.com/sheets/about/) for config
 
 ## Authors
 
@@ -79,17 +79,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## TODO
 
-* Structure the application better
-  * The majority of the JavaScript should live in separate files and be imported - now it's a bit messy.
-  * Remove 
-* Implement server-side-rendering on initial load using NEXT.js
-  * It's prepared for it but didn't have time to implement.
-* Remove reactstrap
-  * This was more of a test - the benefit was questionable. Didn't have support for Flex grid for instance...
-* Webpack
-  * Implement
-    * PurifyCSS
-      * A lot of CSS from Bootstrap is now not used.
-    * CommonsChunkPlugin
-      * The Webpack build is now pretty slow because of this.
-    
+* Replace my private Google Sheet API key with a Lensway official one
