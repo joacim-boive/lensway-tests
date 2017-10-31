@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/cypress/integration/se/verify-canonicals_spec.js" />
+        <item url="file://$PROJECT_DIR$/dist/cypress/integration/se/megamenu_spec.js" />
+        <item url="file://$PROJECT_DIR$/dist/cypress/support/utils.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/cypress/integration/se/verify-canonicals_spec.js" />
+      <root url="file://$PROJECT_DIR$/dist/cypress/integration/se/megamenu_spec.js" />
+      <root url="file://$PROJECT_DIR$/dist/cypress/support/utils.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

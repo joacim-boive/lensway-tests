@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "warn"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "mocha": true
+  },
+  "globals": {
+    "cy": true,
+    "fetch": true,
+    "assert": true
+  }
+}
