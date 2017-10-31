@@ -19,6 +19,9 @@ yarn
 Make a copy of this [Google Sheet](https://docs.google.com/spreadsheets/d/1OFArx_Ilp7QZxFnc23_lbMBYaihtY118n7qSZaJPfGo/edit?usp=sharing).
 It must retain the format and tab names to work as we rely on these.
 
+Get your own [Google Sheet API key](https://developers.google.com/sheets/api/guides/authorizing#APIKey) here.
+Update [sheetConfig.js](sheetConfig.js) with your key and spreadsheet id.
+
 Just run yarn in a terminal (or "npm run test run" if you're old school ;)
 To just run the tests:
 ```
