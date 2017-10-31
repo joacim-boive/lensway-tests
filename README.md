@@ -48,6 +48,10 @@ Details for the implementation of Google Sheet is contained in the sheetConfig.j
 * [Yarn](https://yarnpkg.com) for package management
 * [Google Sheet](https://www.google.com/sheets/about/) for config
 
+## TODO
+
+* Replace my private Google Sheet API key with a Lensway official one
+
 ## Authors
 
 * **Joacim Boive** - *Initial work* - [joacim-boive](https://github.com/joacim-boive)
@@ -56,7 +60,3 @@ Details for the implementation of Google Sheet is contained in the sheetConfig.j
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## TODO
-
-* Replace my private Google Sheet API key with a Lensway official one
