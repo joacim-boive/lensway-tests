@@ -11,8 +11,8 @@ before(() => {
 
 describe('Verify Canonicals', () => {
   it('Should visit each URL in the list successfully and point to the correct canonical', () => {
-    sheetData.forEach(([url, shouldPointTo]) => {
-      test(url, shouldPointTo, `cid=${new Date().getTime()}`);
-    });
+      sheetData.forEach(([url, shouldPointTo]) => {
+        test(url, shouldPointTo, `cid=${new Date().getTime()}`);
+      });
   });
 });

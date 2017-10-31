@@ -6,12 +6,13 @@ let $ = {};
 
 // eslint-disable-next-line no-return-assign
 before(() => {
-  return get.sheet('title',500).then(sheetData => (thisData = sheetData));
+  return get.sheet('title', 500).then(sheetData => (thisData = sheetData));
 });
 
 describe('Headings for index page', () => {
   it('Should load without any of the keywords in the title', () => {
     let keywords = [];
+
     thisData.forEach(data => {
       let [url, keyword] = data;
       keywords = keyword.trim().split(',');

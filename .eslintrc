@@ -18,10 +18,12 @@
     "es6": true,
     "browser": true,
     "node": true,
-    "jest": true
+    "jest": true,
+    "mocha": true
   },
   "globals": {
     "cy": true,
-    "before": false
+    "fetch": true,
+    "assert": true
   }
 }

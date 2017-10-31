@@ -17,12 +17,15 @@ const sheet = (tabName, rows) => {
       if (response.ok) {
         return response.json();
       }
+
       throw new Error('There was a problem with the request for Google Sheet data');
     })
     .then(data => {
       return data.values;
     })
     .catch(function(err) {
+      // eslint-disable-next-line no-undef
+      assert.fail('', '', 'Failed to get data from Google Sheet - is sheetConfig.js properly configured?');
       // eslint-disable-next-line no-console
       console.error(err);
     });
