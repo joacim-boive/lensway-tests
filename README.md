@@ -1,27 +1,32 @@
 # Lensway Cypress Tests
 
-Using Cypress.io to test the lensway websites by configuring a Google Sheet.
+Using [Cypress](https://www.cypress.io) to test the lensway websites by configuring a [Google Sheet](https://docs.google.com/spreadsheets/d/1OFArx_Ilp7QZxFnc23_lbMBYaihtY118n7qSZaJPfGo/edit?usp=sharing).
 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Just run yarn in a terminal (or "npm i" if you're old school ;)
+To just run the tests:
+```
+yarn test run
+```
+
+If you need to interact with the tests:
+```
+yarn test open
+```
+
+Read the rest of the details on how Cypress works over @ [Cypress](https://www.cypress.io)
 
 ![layout](https://user-images.githubusercontent.com/270235/31095085-c61289a0-a7b7-11e7-98c5-a64790c04a91.jpg)
 
-It should work in any modern browser (meaning not IE11). But Edge, FireFox, Safari and Chrome.
 
 ### Background
 
-I choose to host the site using webpack dev server - simply for matter of taste. I prefer to keep the REST API and DEV Environment separate.
-I probably wouldn't have chosen dropdowns to select the different types of graphs - as dropdowns should be kept to a minimum for UX reasons.
-If the specification didn't demand it I would have opted for checkboxes instead, and then I didn't "have to" to the filtering of the dropowns-
-where you never can have two of the same values selected at the same time.
+The tests are intended to run on the CI server (Jenkins at the time of this writing).
+Don't install Cypress globally, it's intended to be tied to a project so we can be sure that the test works with the running version.
 
-The performance was so good I didn't see a reason not to being able to show all the graphs even do we're selecting the entire dataset.
-That's why I didn't enforce selecting what graphs to show initially, but rather filter them later if needed.
-
-PRO Tip! To sort two columns of the table, press SHIFT and click on a column.
+Details for the implementation of Google Sheet is contained in the sheetConfig.js file.
 
 
 ### Installing

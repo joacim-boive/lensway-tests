@@ -4,7 +4,7 @@
  */
 
 //Version of the Google Sheet API (V4)
-const ROOT_URL = 'https://sheets.googleapis.com/v4/spreadsheets2';
+const ROOT_URL = 'https://sheets.googleapis.com/v4/spreadsheets';
 
 //ID of the sheet to use
 const SPREADSHEET_ID = '1OFArx_Ilp7QZxFnc23_lbMBYaihtY118n7qSZaJPfGo';
