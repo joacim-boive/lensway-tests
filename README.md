@@ -1,6 +1,17 @@
 # Lensway Cypress Tests
 
-Using [Cypress](https://www.cypress.io) to test the lensway websites by configuring a [Google Sheet](https://docs.google.com/spreadsheets/d/1OFArx_Ilp7QZxFnc23_lbMBYaihtY118n7qSZaJPfGo/edit?usp=sharing).
+Using [Cypress](https://www.cypress.io) to test the lensway websites by configuring a [Google Sheet](https://docs.google.com/spreadsheets/d/1OFArx_Ilp7QZxFnc23_lbMBYaihtY118n7qSZaJPfGo/edit?usp=sharing)
+
+
+### Installing
+
+
+Firstly, we need to install our dependencies to be able to run the project:
+```
+In a terminal, from the project root:
+yarn
+
+```
 
 
 ## Getting Started
@@ -18,8 +29,6 @@ yarn test open
 
 Read the rest of the details on how Cypress works over @ [Cypress](https://www.cypress.io)
 
-![layout](https://user-images.githubusercontent.com/270235/31095085-c61289a0-a7b7-11e7-98c5-a64790c04a91.jpg)
-
 
 ### Background
 
@@ -28,35 +37,6 @@ Don't install Cypress globally, it's intended to be tied to a project so we can 
 
 Details for the implementation of Google Sheet is contained in the sheetConfig.js file.
 
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Firstly, we need to install our dependencies to be able to run the project:
-```
-In a terminal, from the project root:
-yarn
-
-```
-
-Wait until the dependencies have finished installing then run:
-
-```
-In a terminal, from the project root:
-yarn start
-
-```
-
-This will start the backend that provides the REST API to the demo application.
-
-Finally, run:
-
-```
-In a NEW terminal, from the project root:
-yarn dev
-
-```
 
 ## Using
 
