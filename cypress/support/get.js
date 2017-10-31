@@ -1,4 +1,4 @@
-import { URL, ID, KEY } from '../../sheetConfig';
+import { URL, ID, KEY } from '../../sheet-config';
 
 const get = {};
 
@@ -25,7 +25,7 @@ const sheet = (tabName, rows) => {
     })
     .catch(function(err) {
       // eslint-disable-next-line no-undef
-      assert.fail('', '', 'Failed to get data from Google Sheet - is sheetConfig.js properly configured?');
+      assert.fail('', '', 'Failed to get data from Google Sheet - is sheet-config.js properly configured?');
       // eslint-disable-next-line no-console
       console.error(err);
     });

@@ -20,7 +20,7 @@ Make a copy of this [Google Sheet](https://docs.google.com/spreadsheets/d/1OFArx
 It must retain the format and tab names to work as we rely on these.
 
 Get your own [Google Sheet API key](https://developers.google.com/sheets/api/guides/authorizing#APIKey) here.
-Update [sheetConfig.js](sheetConfig.js) with your key and spreadsheet id.
+Update [sheet-config.js](sheet-config.js) with your key and spreadsheet id.
 
 Just run yarn in a terminal (or "npm run test run" if you're old school ;)
 To just run the tests:
@@ -41,7 +41,7 @@ Read the rest of the details on how Cypress works over @ [Cypress](https://www.c
 The tests are intended to run on the CI server (Jenkins at the time of this writing).
 Don't install Cypress globally, it's intended to be tied to a project so we can be sure that the test works with the running version.
 
-Details for the implementation of Google Sheet is contained in the sheetConfig.js file.
+Details for the implementation of Google Sheet is contained in the sheet-config.js file.
 
 
 ## Using
