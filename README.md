@@ -10,7 +10,6 @@ Firstly, we need to install our dependencies to be able to run the project.
 In a terminal, from the project root:
 ```
 yarn
-
 ```
 
 
