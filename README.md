@@ -44,7 +44,7 @@ Details for the implementation of Google Sheet is contained in the sheetConfig.j
 * [Cheerio](https://github.com/cheeriojs/cheerio) for HTML parsing
 * [Prettier](https://github.com/prettier/prettier) for formatting source code
 * [ESLint](https://eslint.org) for linting
-* * [AirBnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) linting rules
+  * [AirBnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) linting rules
 * [Yarn](https://yarnpkg.com) for package management
 * [Google Sheet](https://www.google.com/sheets/about/) for config
 
