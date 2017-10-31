@@ -16,7 +16,10 @@ yarn
 
 ## Getting Started
 
-Just run yarn in a terminal (or "npm i" if you're old school ;)
+Make a copy of this [Google Sheet](https://docs.google.com/spreadsheets/d/1OFArx_Ilp7QZxFnc23_lbMBYaihtY118n7qSZaJPfGo/edit?usp=sharing).
+It must retain the format and tab names to work as we rely on these.
+
+Just run yarn in a terminal (or "npm run test run" if you're old school ;)
 To just run the tests:
 ```
 yarn test run
