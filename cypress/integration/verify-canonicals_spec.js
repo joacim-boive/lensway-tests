@@ -4,6 +4,7 @@ import * as test from '../support/test';
 let sheetData = [];
 
 before(() => {
+  debugger;
   return get.sheet('canonicals', 500).then(data => {
     sheetData = data;
   });

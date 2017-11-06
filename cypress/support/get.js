@@ -9,6 +9,8 @@ const get = {};
  */
 const sheet = (tabName, rows) => {
   const COL_A = 'A2';
+  debugger;
+
   return fetch(`${URL}/${ID}/values/${tabName}!${COL_A}:B${rows.toString()}?key=${KEY}`, {
     method: 'GET',
     mode: 'cors',
