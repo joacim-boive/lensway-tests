@@ -6,11 +6,10 @@ Using [Cypress](https://www.cypress.io) to test the lensway websites by configur
 ### Installing
 
 
-Firstly, we need to install our dependencies to be able to run the project:
-```
+Firstly, we need to install our dependencies to be able to run the project.
 In a terminal, from the project root:
+```
 yarn
-
 ```
 
 
